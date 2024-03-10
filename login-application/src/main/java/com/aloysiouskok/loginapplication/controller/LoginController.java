@@ -15,12 +15,13 @@ public class LoginController {
     private UserService userService;
 
     @GetMapping("/login")
-    public String login(Model model) {
+    public String login() {
         return "login";
     }
 
     @PostMapping("/login")
     public String login(@RequestParam String username, @RequestParam String password, Model model) {
+
         if (userService.isValidUser(username, password)) {
             UserModel user = userService.findByUsername(username).get();
             model.addAttribute("user", user);

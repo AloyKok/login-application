@@ -10,4 +10,4 @@ CREATE TABLE IF NOT EXISTS users (
 );
 
 INSERT INTO users (username, password, email, role)
-VALUES ('user', 'password1', 'user@gmail.com', 'user'), ('manager', 'password2', 'manager@gmail.com', 'manager');
+VALUES ('tom', 'password', 'user@gmail.com', 'user'), ('kelly', 'password', 'manager@gmail.com', 'manager');

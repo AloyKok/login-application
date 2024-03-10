@@ -12,7 +12,7 @@ import java.util.Optional;
 
 @Controller
 public class WelcomeController {
-
+    @Autowired
     private UserService userService;
 
     @GetMapping("/welcome")
