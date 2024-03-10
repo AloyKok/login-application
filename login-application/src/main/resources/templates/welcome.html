@@ -55,10 +55,15 @@
 </head>
 <body>
 <h1>Welcome, <span th:text="${user.username}">User</span>!</h1>
-<p>Your role is: <span th:text="${user.role}">Role</span></p>
-<a href="/logout">Logout</a>
+    <p>Role: <span th:text="${user.role}"></span></p>
+    <p>Email: <span th:text="${user.email}"></span></p>
+    <a href="/logout">Logout</a>
 <div th:if="${user.role == 'manager'}">
     <a href="/restricted">Access Restricted Page</a>
+</div>
+<div>
+    <button th:if="${#locale == 'en'}" th:onclick="|window.location.href='/language/zh'|">Switch to Chinese</button>
+    <button th:if="${#locale == 'zh'}" th:onclick="|window.location.href='/language/en'|">Switch to English</button>
 </div>
 </body>
 </html>

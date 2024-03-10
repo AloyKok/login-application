@@ -15,7 +15,8 @@ public class LoginController {
     private UserService userService;
 
     @GetMapping("/login")
-    public String login() {
+    public String login(Model model) {
+        model.addAttribute("error", null);
         return "login";
     }
 
